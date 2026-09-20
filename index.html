@@ -1,0 +1,603 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compel Eletro | Compel Jundiaí Produtos Eletrônicos LTDA</title>
+    <meta name="description" content="Soluções em componentes eletrônicos, resistores industriais e materiais elétricos de alta qualidade em Jundiaí - SP. Atendimento corporativo especializado.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        },
+                        cyan: {
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                        },
+                        dark: {
+                            bg: '#0b0f19',
+                            card: '#111827',
+                            border: '#1f2937'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 3s infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%': { boxShadow: '0 0 15px rgba(99, 102, 241, 0.2)' },
+                            '100%': { boxShadow: '0 0 35px rgba(6, 182, 212, 0.5)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS Styles -->
+    <style>
+        body {
+            font-family: 'Outfit', 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.005) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.25);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-border {
+            position: relative;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(6, 182, 212, 0.3));
+            padding: 1px;
+        }
+
+        .tech-grid {
+            background-image: radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="tech-grid min-h-screen selection:bg-brand-500 selection:text-white">
+
+    <!-- TOP NOTIFICATION BANNER -->
+    <div class="bg-gradient-to-r from-brand-900 via-indigo-900 to-slate-900 border-b border-indigo-500/20 text-xs md:text-sm py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span> Situação Ativa
+                </span>
+                <span class="text-slate-300 hidden md:inline">|</span>
+                <span class="text-slate-300 font-medium truncate">Compel Jundiaí Produtos Eletrônicos LTDA - CNPJ: 07.487.905/0001-87</span>
+            </div>
+            <a href="https://www.casadoresistor.com.br/" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 font-medium inline-flex items-center gap-1 transition-colors">
+                Loja Oficial: Casa do Resistor <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-cyan-400 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-extrabold tracking-tight text-white block leading-none">COMPEL <span class="text-cyan-400">ELETRO</span></span>
+                        <span class="text-[10px] tracking-widest uppercase text-slate-400 font-semibold">Eletrônicos & Industria</span>
+                    </div>
+                </a>
+
+                <!-- NAV LINKS -->
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#servicos" class="hover:text-cyan-400 transition-colors">Principais Serviços</a>
+                    <a href="#produtos" class="hover:text-cyan-400 transition-colors">Produtos</a>
+                    <a href="#registro" class="hover:text-cyan-400 transition-colors">Dados Corporativos</a>
+                    <a href="#localizacao" class="hover:text-cyan-400 transition-colors">Contato & Localização</a>
+                </nav>
+
+                <!-- HEADER CTA -->
+                <div class="flex items-center gap-4">
+                    <a href="https://www.casadoresistor.com.br/" target="_blank" rel="noopener" 
+                       class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-white rounded-xl group bg-gradient-to-br from-cyan-500 to-brand-600 group-hover:from-cyan-500 group-hover:to-brand-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-800 shadow-lg shadow-cyan-500/20 transition-all duration-300">
+                        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-slate-950 rounded-[10px] group-hover:bg-opacity-0 flex items-center gap-2 font-semibold">
+                            <i class="fa-solid fa-cart-shopping text-cyan-400 group-hover:text-white transition-colors"></i>
+                            Acessar Catálogo Completo
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+        <!-- Glow accents -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-tr from-brand-600/20 to-cyan-500/20 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs sm:text-sm text-cyan-300 font-medium">
+                        <i class="fa-solid fa-award text-amber-400"></i>
+                        <span>Desde 2005 no Mercado de Eletrônica e Automação</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Excelência Corporativa em <span class="gradient-text">Componentes Eletrônicos</span> & Industriais
+                    </h1>
+
+                    <p class="text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        A <strong class="text-white">Compel Eletro</strong> é sua parceira estratégica em Jundiaí e região. Oferecemos soluções completas em resistores, capacitores e suporte técnico especializado para a sua empresa.
+                    </p>
+
+                    <!-- CTA BUTTONS -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://www.casadoresistor.com.br/" target="_blank" rel="noopener"
+                           class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-cyan-500 text-white font-bold text-base hover:from-brand-500 hover:to-cyan-400 transition-all duration-300 shadow-xl shadow-brand-500/25 flex items-center justify-center gap-3 group">
+                            <span>Acessar Loja Oficial / Catálogo</span>
+                            <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+
+                        <a href="https://wa.me/551145226997" target="_blank" rel="noopener"
+                           class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-200 hover:text-white hover:bg-slate-800 font-semibold text-base transition-all flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            Falar com Atendimento
+                        </a>
+                    </div>
+
+                    <!-- TRUST BADGES -->
+                    <div class="pt-6 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-4 text-slate-400 text-xs sm:text-sm">
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                            <span>Empresa Ativa e Regular</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-center lg:justify-start">
+                            <i class="fa-solid fa-truck-fast text-cyan-400"></i>
+                            <span>Envio para Todo o Brasil</span>
+                        </div>
+                        <div class="flex items-center gap-2 justify-center lg:justify-start col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-building-shield text-brand-400"></i>
+                            <span>20+ Anos de Tradição</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERO CARD DISPLAY -->
+                <div class="lg:col-span-5">
+                    <div class="gradient-border animate-float">
+                        <div class="bg-slate-900 rounded-[15px] p-6 sm:p-8 space-y-6">
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                                <div>
+                                    <h3 class="text-lg font-bold text-white">Ficha de Identificação</h3>
+                                    <p class="text-xs text-slate-400">Compel Jundiai Produtos Eletronicos LTDA</p>
+                                </div>
+                                <span class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold">
+                                    MATRIZ
+                                </span>
+                            </div>
+
+                            <div class="space-y-4 text-sm">
+                                <div class="flex justify-between items-center py-2 border-b border-slate-800/50">
+                                    <span class="text-slate-400">CNPJ:</span>
+                                    <span class="font-mono font-semibold text-cyan-300">07.487.905/0001-87</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2 border-b border-slate-800/50">
+                                    <span class="text-slate-400">Inscrição Estadual:</span>
+                                    <span class="font-mono font-semibold text-slate-200">407.387.873.113</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2 border-b border-slate-800/50">
+                                    <span class="text-slate-400">Data de Abertura:</span>
+                                    <span class="font-semibold text-slate-200">08/07/2005</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2 border-b border-slate-800/50">
+                                    <span class="text-slate-400">Regime Tributário:</span>
+                                    <span class="font-semibold text-amber-400">Simples Nacional</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2">
+                                    <span class="text-slate-400">Localização:</span>
+                                    <span class="font-semibold text-slate-200 text-right">Jundiaí / SP</span>
+                                </div>
+                            </div>
+
+                            <a href="#registro" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-medium text-xs text-center block transition-colors">
+                                Ver Detalhes Cadastrais Completos <i class="fa-solid fa-chevron-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN SERVICES SECTION -->
+    <section id="servicos" class="py-20 bg-slate-950/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-extrabold">Especialização e Qualidade</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">Principais Serviços e Atuação</p>
+                <p class="text-slate-400 text-base">Fornecemos uma gama completa de componentes e serviços especializados direcionados para indústrias, comércios e técnicos em eletrônica.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="glass-card rounded-2xl p-6 relative group">
+                    <div class="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/30 text-brand-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-brand-500 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Componentes Eletrônicos</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Fornecimento especializado de semicondutores, diodos, transistores, CI's e módulos para reposição e montagem de placas eletrônicas.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Linha SMD e PTH</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Alta Variedade em Estoque</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card rounded-2xl p-6 relative group">
+                    <div class="w-14 h-14 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-cyan-500 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Resistores Industriais</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Resistores de potência, fita, fio, filme metálico e louça. Soluções customizadas para frenagem de motores e automação industrial.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Diversas Potências e Valores</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Parceiro "Casa do Resistor"</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card rounded-2xl p-6 relative group">
+                    <div class="w-14 h-14 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-indigo-500 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Material Elétrico & Ferramentas</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Equipamentos de medição (multímetros, osciloscópios), estações de solda, conectores, cabos e suprimentos para bancada técnica.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Estações de Solda Profissionais</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Conectores de Alta Precisão</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card rounded-2xl p-6 relative group">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Atendimento Corporativo</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Suporte técnico para cotações corporativas (B2B), auxílio na especificação de componentes equivalentes e faturamento facilitado.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Emissão de NFe Completa</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> Atendimento Especializado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORPORATE TRANSPARENCY SECTION -->
+    <section id="registro" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs uppercase tracking-widest text-brand-400 font-extrabold">Transparência Cadastral</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white">Informações Registrais da Empresa</p>
+                <p class="text-slate-400 text-base">Consulte abaixo os dados oficiais atualizados junto aos órgãos governamentais e Receita Federal.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Razão Social</span>
+                            <i class="fa-solid fa-id-card text-brand-400 text-lg"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-1">Compel Jundiaí Produtos Eletrônicos LTDA</h4>
+                        <p class="text-xs text-slate-400">Nome Fantasia: <span class="text-cyan-300 font-semibold">Compel Eletro</span></p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
+                        <span class="text-slate-400">Tipo de Estabelecimento:</span>
+                        <span class="px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 font-semibold">MATRIZ</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Documentação Oficial</span>
+                            <i class="fa-solid fa-file-contract text-cyan-400 text-lg"></i>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <span class="text-xs text-slate-400 block">CNPJ:</span>
+                                <span class="text-lg font-mono font-bold text-cyan-300">07.487.905/0001-87</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 block">Inscrição Estadual (SP):</span>
+                                <span class="text-sm font-mono font-semibold text-slate-200">407.387.873.113</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
+                        <span class="text-slate-400">Situação Cadastral:</span>
+                        <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">ATIVA</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card rounded-xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Perfil Empresarial</span>
+                            <i class="fa-solid fa-chart-pie text-purple-400 text-lg"></i>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Porte:</span>
+                                <span class="font-semibold text-white">Micro Empresa (ME)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Natureza Jurídica:</span>
+                                <span class="font-semibold text-white">Soc. Empresária LTDA</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Capital Social:</span>
+                                <span class="font-semibold text-emerald-400">R$ 150.000,00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
+                        <span class="text-slate-400">Simples Nacional:</span>
+                        <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-semibold">Optante (desde 01/07/2007)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operational Details Banner -->
+            <div class="mt-8 glass-panel rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 border-indigo-500/20">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl shrink-0">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">Tradição & Experiência Comprovada</h4>
+                        <p class="text-sm text-slate-300">Data de Abertura: <strong class="text-white">08/07/2005</strong> — Atuando continuamente com excelência técnica há mais de 20 anos.</p>
+                    </div>
+                </div>
+                <a href="https://www.casadoresistor.com.br/" target="_blank" rel="noopener" 
+                   class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm whitespace-nowrap transition-colors shadow-lg shadow-brand-600/30">
+                    Ir para o Site Oficial
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & CONTACT SECTION -->
+    <section id="localizacao" class="py-20 bg-slate-950/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact info side -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <h2 class="text-xs uppercase tracking-widest text-cyan-400 font-extrabold mb-2">Canais Ativos</h2>
+                        <h3 class="text-3xl font-extrabold text-white">Fale Conosco & Atendimento</h3>
+                        <p class="text-slate-400 text-sm mt-2">Entre em contato via telefone, e-mail ou visite nossa loja física no centro de Jundiaí.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Telefone 1 -->
+                        <a href="tel:1145226997" class="glass-card rounded-xl p-4 flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase font-semibold block">Telefone Principal</span>
+                                <span class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">(11) 4522-6997</span>
+                            </div>
+                        </a>
+
+                        <!-- Telefone 2 -->
+                        <a href="tel:1141263539" class="glass-card rounded-xl p-4 flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-400 uppercase font-semibold block">Telefone Secundário</span>
+                                <span class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">(11) 4126-3539</span>
+                            </div>
+                        </a>
+
+                        <!-- E-mail -->
+                        <a href="mailto:contato@compeljundiai.com.br" class="glass-card rounded-xl p-4 flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="text-xs text-slate-400 uppercase font-semibold block">E-mail de Contato</span>
+                                <span class="text-base font-bold text-white group-hover:text-cyan-400 transition-colors truncate block">contato@compeljundiai.com.br</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Endereço Correspondência -->
+                    <div class="glass-panel rounded-2xl p-6 border-slate-800">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-truck-ramp-box"></i> Endereço para Correspondência & Entregas
+                        </h4>
+                        <address class="not-italic text-sm text-slate-300 space-y-1">
+                            <p class="font-bold text-white">Compel Eletro Compel Jundiai Produtos Eletronicos LTDA</p>
+                            <p>Rua Vigario Joao Jose Rodrigues, 162</p>
+                            <p>Bairro: Centro</p>
+                            <p>Jundiaí - SP</p>
+                            <p class="font-mono text-cyan-300 font-semibold pt-1">CEP: 13201-001</p>
+                        </address>
+                    </div>
+                </div>
+
+                <!-- Map & Directions -->
+                <div class="lg:col-span-7 flex flex-col justify-between">
+                    <div class="glass-card rounded-2xl p-6 h-full flex flex-col">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-location-dot text-brand-400"></i> Localização no Mapa
+                            </h3>
+                            <span class="text-xs text-slate-400">Jundiaí, São Paulo</span>
+                        </div>
+                        
+                        <!-- Map Container Placeholder / Embed -->
+                        <div class="relative w-full h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-800 bg-slate-900 flex-1">
+                            <iframe 
+                                title="Mapa Compel Eletro"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0; filter: grayscale(0.8) contrast(1.2) opacity(0.85);" 
+                                loading="lazy" 
+                                allowfullscreen 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.398912485542!2d-46.8872!3d-23.1925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf26f5e8e8e8e8%3A0x0!2sRua%20Vigario%20Joao%20Jose%20Rodrigues%2C%20162%20-%20Centro%2C%20Jundia%C3%AD%20-%20SP%2C%2013201-001!5e0!3m2!1pt-BR!2sbr!4v1600000000000">
+                            </iframe>
+                            <div class="absolute bottom-4 left-4 right-4 glass-panel p-3 rounded-lg flex items-center justify-between text-xs">
+                                <span class="text-slate-200">Rua Vigario Joao Jose Rodrigues, 162 - Centro</span>
+                                <a href="https://maps.google.com/?q=Rua+Vigario+Joao+Jose+Rodrigues+162+Jundiai+SP" target="_blank" rel="noopener" class="px-3 py-1 bg-brand-600 hover:bg-brand-500 text-white rounded font-medium transition-colors">
+                                    Abrir no Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFICIAL STORE REDIRECT BANNER -->
+    <section class="py-16 bg-gradient-to-r from-brand-900 via-indigo-950 to-slate-950 border-y border-brand-500/20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+            <span class="inline-block px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-xs font-bold uppercase tracking-wider">
+                Catálogo On-line Atualizado
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Visite Nossa Loja Virtual Oficial</h2>
+            <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+                Confira preços, especificações técnicas detalhadas e faça seus pedidos diretamente na plataforma <strong class="text-cyan-300">Casa do Resistor</strong>.
+            </p>
+            <div class="pt-2">
+                <a href="https://www.casadoresistor.com.br/" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-cyan-400 to-brand-500 text-slate-950 font-extrabold text-lg hover:from-cyan-300 hover:to-brand-400 shadow-2xl shadow-cyan-500/30 transition-all transform hover:-translate-y-1">
+                    <i class="fa-solid fa-shop text-xl"></i>
+                    <span>Ir para www.casadoresistor.com.br</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-xs sm:text-sm py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-slate-900">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-lg">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold text-white block leading-none">COMPEL ELETRO</span>
+                        <span class="text-[10px] text-slate-500">Compel Jundiai Produtos Eletronicos LTDA</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 text-slate-400">
+                    <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
+                    <a href="#registro" class="hover:text-white transition-colors">Cadastro</a>
+                    <a href="#localizacao" class="hover:text-white transition-colors">Localização</a>
+                    <a href="https://www.casadoresistor.com.br/" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 transition-colors">Site Oficial</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-500 text-xs">
+                <p>© <span id="year"></span> Compel Eletro. Todos os direitos reservados. CNPJ: 07.487.905/0001-87</p>
+                <p class="md:text-right">Rua Vigario Joao Jose Rodrigues, 162 - Centro, Jundiaí - SP, CEP 13201-001</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING ACTION BUTTON (REDIRECT TO CASA DO RESISTOR) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://www.casadoresistor.com.br/" target="_blank" rel="noopener" 
+           title="Acessar Casa do Resistor"
+           class="flex items-center gap-2 px-4 py-3 rounded-full bg-cyan-500 text-slate-950 font-bold text-xs shadow-2xl shadow-cyan-500/50 hover:bg-cyan-400 hover:scale-105 transition-all">
+            <i class="fa-solid fa-cart-shopping text-base"></i>
+            <span class="hidden sm:inline">Loja Oficial</span>
+        </a>
+    </div>
+
+    <!-- JS SCRIPTS -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
